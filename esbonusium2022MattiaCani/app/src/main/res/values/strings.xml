@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GorillApp</string>
+    <string name="home">Home</string>
+    <string name="registration">Registrazione</string>
+    <string name="registrati_ora"><u>Sei nuovo? Registrati ora!</u></string>
+    <string name="modifica_password"><u>Modifica la tua password</u></string>
+</resources>

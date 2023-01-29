@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlPanel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bannerNormale"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/banner_app_admin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:gravity="center"
+                android:text="PANNELLO DI CONTROLLO"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ricerca utente: "
+                android:textSize="20dp"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <EditText
+                    android:id="@+id/keywordSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Scrivi qui l'username da ricercare" />
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:text="CERCA" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/emptyResultMessage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="Oh oh... niente da mostrare!"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/emptyResultImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:paddingBottom="30dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/searchempty"/>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="329dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/backHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="22dp"
+                    android:text="torna alla home"
+                    android:layout_gravity="center"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/resetSearchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="230dp"
+                    android:text="reset ricerca"
+                    android:layout_gravity="center"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+            
+
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
